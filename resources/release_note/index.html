@@ -2,8 +2,8 @@
 <html lang="en" ng-app="rnApp">
     <head>
         <title>Liatrio DevOps Platform</title>
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="favicon.png">
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,75 +13,43 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-     
+
    <body ng-controller="mainController as mainCtrl">
-       <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" rel="home" href="#" title="Liatrio DevOps Platform">
-                        Liatrio DevOps Platform
-                    </a>
-                   
-                                     
-                </div>
-                
-            </div>
-        </nav>
-       
-        <div id="header" class="container-fluid nopadding">
-            <!--<img src="img/devops-bg1.jpg" style="width:100%">-->
-             <div class="header-cover">
-                <div class="header-intro">
-                     <h1 class="header-title">
-                        DevOps Dashboard
-                     </h1>                    
-                     
-                </div>
+     <nav class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <p class="navbar-left logo"><img src="img/liatrio_small_icon.png">liatrio</a>
+      </div>
+       <div class="nav navbar-right">
+         <p>Liatrio DevOps Platform</p>
+       </div>
+    </nav>
 
-                 <div class="header-teasers">
-                     <div class="other-info">
-                        This platform is used for demos, training and to start real projects.<br />
-                     </div>
-                 </div>
-             </div>           
 
+    <div class="container-fluid nopadding">
+
+        <div id="core">
+            <div ng-repeat="linkitem in mainCtrl.core">
+                 <component-list></component-list>
+             </div>
         </div>
-            
-        <div class="container-fluid nopadding">
-            
-            <div id="core">
-                <div ng-repeat="linkitem in mainCtrl.core">
-                     <component-list></component-list>
-                 </div>
+
+        <div id="blueprints">
+            <div ng-repeat="code in codeJSON">
+                <ng-include src="code.url"></ng-include> <!-- includes the url from the object, which has the property url.-->
+                <hr ng-hide="$last" class="blueprint-separator">
             </div>
-           
-            <div id="blueprints">
-                <div ng-repeat="code in codeJSON">
-                    <ng-include src="code.url"></ng-include> <!-- includes the url from the object, which has the property url.-->
-                    <hr ng-hide="$last" class="blueprint-separator">
-                </div>                
-            </div>
-                      
         </div>
-        <footer class="container-fluid">
-            Liatrio DevOps Platform
-        </footer>
-       
+
+    </div>
+
 <!--        scripts start-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
         <script src="js/appRN.js"></script>
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script> jQuery.noConflict(); </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-                         
-<!--        scripts end-->        
+
+<!--        scripts end-->
    </body>
 </html>
