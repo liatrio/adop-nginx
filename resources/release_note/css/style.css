@@ -86,15 +86,14 @@ MAIN CONTENT
   min-width: 180px;
   height: 150px;
   padding: 0;
-
+  margin: 0 1.2% 20px 0;
+  border-width: 2px;
   background-color: #ffffff; }
   .bs-callout a {
     display: block;
     width: 100%;
     height: 92%;
     overflow: hidden; }
-  .bs-callout code {
-    }
 
 /* services - tools */
 #core {
@@ -106,7 +105,8 @@ MAIN CONTENT
       padding-bottom: 0; }
     #core .services h1.service-heading {
       font-family: "sans-condensed", sans-serif;
-
+      font-weight: 500;
+      border-bottom: solid gray 2px;
     }
     #core .services a.service {
       color: #5C5C5C; }
@@ -114,10 +114,10 @@ MAIN CONTENT
         position: absolute;
         top: 0;
         left: 0;
-        background-color: #ffffff;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
         margin: 0;
         padding: 5px 10px;
-        width: 101%;
+        width: 100%;
         height: 40px;
         z-index: 100;
         overflow: hidden;
@@ -159,6 +159,7 @@ MAIN CONTENT
   #blueprints .tab-pane-blocks-side1 .tab-pane-blocks-heading {
     padding-bottom: 10px;
     font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
+
     line-height: 0.5; }
     #blueprints .tab-pane-blocks-side1 .tab-pane-blocks-heading h1 {
       font-size: 4.1em;
