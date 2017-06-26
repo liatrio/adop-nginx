@@ -14,33 +14,36 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
-   <body ng-controller="mainController as mainCtrl">
-     <nav class="navbar navbar-inverse">
+     <nav id="myNavbar" class="navbar navbar-inverse">
       <div class="navbar-header">
-        <p class="navbar-left logo"><img src="img/liatrio_small_icon.png">liatrio</a>
+        <div class="navbar-left logo"><img src="img/liatrio_small_icon.png"><span class="float">liatrio</span></div>
       </div>
-       <div class="nav navbar-right">
-         <p>Liatrio DevOps Platform</p>
-       </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+         <div class="navbar-right title">
+           <p>DevOps Platform</p>
+         </div>
+      </div>
     </nav>
 
+    <body ng-controller="mainController as mainCtrl">
+      <div id="core">
+          <div ng-repeat="linkitem in mainCtrl.core">
+               <component-list></component-list>
+           </div>
+      </div>
+      <div id="core">
+          <div ng-repeat="linkitem in mainCtrl.not_core">
+               <component-list></component-list>
+           </div>
+      </div>
 
-    <div class="container-fluid nopadding">
-
-        <div id="core">
-            <div ng-repeat="linkitem in mainCtrl.core">
-                 <component-list></component-list>
-             </div>
-        </div>
-
-        <div id="blueprints">
-            <div ng-repeat="code in codeJSON">
-                <ng-include src="code.url"></ng-include> <!-- includes the url from the object, which has the property url.-->
-                <hr ng-hide="$last" class="blueprint-separator">
-            </div>
-        </div>
-
-    </div>
+      <div id="blueprints">
+          <div ng-repeat="code in codeJSON">
+              <ng-include src="code.url"></ng-include> <!-- includes the url from the object, which has the property url.-->
+              <hr ng-hide="$last" class="blueprint-separator">
+          </div>
+      </div>
 
 <!--        scripts start-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>

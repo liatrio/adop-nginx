@@ -1,7 +1,7 @@
 {
         "core" : [
             {
-                "type": "Tool Links",
+                "type": "Pipeline Tools",
                 "components" : [
                     {
                         "id": "jenkins",
@@ -28,7 +28,7 @@
                         "id": "nexus",
                         "title": "nexus",
                         "img": "img/nexus.png",
-                        "description": "Software Repository Manager",
+                        "description": "Artifact Repository and Management",
                         "link": "/nexus/"
                     },
                     {
@@ -55,7 +55,14 @@
                         "img": "img/sensu.png",
                         "description": "Monitoring",
                         "link": "/sensu/"
-                    },
+                    }
+                ]
+            }
+        ],
+        "not_core" : [
+            {
+                "type": "Admin Tools",
+                "components" : [
                     {
                         "id": "ldap-ltb",
                         "title": "ltb",
