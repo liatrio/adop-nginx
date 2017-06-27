@@ -85,7 +85,7 @@
     }
 
     function createUrl(host){
-        return "http://"+ host + "." + window.location.host+ (window.location.host.indexOf(".xip.io") > -1 ? "" : ".xip.io/");
+        return "http://"+ host + "." + window.location.host;
     }
 
     function getStatusClass(status,node_status){
