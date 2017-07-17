@@ -1,7 +1,7 @@
 {
         "core" : [
             {
-                "type": "Tool Links",
+                "type": "Pipeline Tools",
                 "components" : [
                     {
                         "id": "jenkins",
@@ -48,7 +48,14 @@
                         "img": "img/sensu.png",
                         "description": "Monitoring",
                         "link": "/sensu/"
-                    },
+                    }
+                ]
+            }
+        ],
+        "not_core" : [
+            {
+                "type": "Admin Tools",
+                "components" : [
                     {
                         "id": "ldap-ltb",
                         "title": "ltb",
