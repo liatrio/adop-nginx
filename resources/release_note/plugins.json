@@ -25,13 +25,6 @@
                         "link": "/sonar/"
                     },
                     {
-                        "id": "nexus",
-                        "title": "nexus",
-                        "img": "img/nexus.png",
-                        "description": "Artifact Repository and Management",
-                        "link": "/nexus/"
-                    },
-                    {
                         "id": "kibana",
                         "title": "kibana",
                         "img": "img/kibana.png",
