@@ -86,7 +86,7 @@
 
     function createUrl(host){
         if (window.location.host == "localhost") {
-          return "http://"+ host + "." + window.location.host);
+          return "http://"+ host + "." + window.location.host;
         } else {
           return "http://"+ host + "." + window.location.host + (window.location.host.indexOf(".xip.io") > -1) ? "" : ".xip.io/";
         }
