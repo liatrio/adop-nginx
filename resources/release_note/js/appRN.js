@@ -85,11 +85,13 @@
     }
 
     function createUrl(host){
-        if (window.location.host == "localhost") {
-          return "http://"+ host + "." + window.location.host);
-        } else {
-          return "http://"+ host + "." + window.location.host + (window.location.host.indexOf(".xip.io") > -1) ? "" : ".xip.io/";
+        var toReturn = "http://"+ host + "." + window.location.host;
+
+        if (window.location.host != "localhost") {
+                toReturn += (window.location.host.indexOf(".xip.io") > -1) ? "" : ".xip.io/";
         }
+
+        return toReturn;
     }
 
     function getStatusClass(status,node_status){
