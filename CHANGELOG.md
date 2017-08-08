@@ -26,3 +26,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.4.3 - 2017-07-27
 ## Added
 - bugfix on if-else logic
+
+## 0.4.4 - 2017-08-08
+## Added
+- fixed scroll issue on ldop dashboard
