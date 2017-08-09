@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Robert Northard, <robert.a.northard>
+LABEL maintainer Liatrio
 
 ENV NGINX_VERSION 1.8.0
 
@@ -31,11 +31,11 @@ RUN mkdir /var/log/nginx \
         --add-module=/root/nginx-auth-ldap \
         --with-http_ssl_module \
         --with-debug \
-        --conf-path=/etc/nginx/nginx.conf \ 
-        --sbin-path=/usr/sbin/nginx \ 
-        --pid-path=/var/run/nginx.pid \ 
-        --error-log-path=/var/log/nginx/error.log \ 
-        --http-log-path=/var/log/nginx/access.log \ 
+        --conf-path=/etc/nginx/nginx.conf \
+        --sbin-path=/usr/sbin/nginx \
+        --pid-path=/var/run/nginx.pid \
+        --error-log-path=/var/log/nginx/error.log \
+        --http-log-path=/var/log/nginx/access.log \
     && make install \
     && cd .. \
     && rm -rf nginx-auth-ldap \
