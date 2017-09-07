@@ -11,6 +11,13 @@
                         "link": "/jenkins/"
                     },
                     {
+                        "id": "gerrit",
+                        "title": "gerrit",
+                        "img": "img/gerrit.jpg",
+                        "description": "Git Repository Management & Code Review Tool",
+                        "link": "/gerrit/"
+                    },
+                    {
                         "id": "sonar",
                         "title": "sonar",
                         "img": "img/sonar.png",
@@ -23,6 +30,17 @@
                         "img": "img/kibana.png",
                         "description": "Kibana Dashboard for Logging (ELK)",
                         "link": "/app/kibana"
+                    },
+                    {
+                        "id": "selenium",
+                        "title": "selenium",
+                        "img": "img/selenium.png",
+                        "description": "Selenium Grid for Automated Testing",
+                        "link": "",
+                        "linkCreate": {
+                            "host": "selenium",
+                            "endPath": "//grid/console"
+                        }
                     },
                     {
                         "id": "sensu",
