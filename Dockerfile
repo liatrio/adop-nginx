@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-LABEL version = "0.6.0"
+LABEL version = "0.7.0"
 
 ENV NGINX_VERSION 1.8.0
 
