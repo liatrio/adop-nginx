@@ -30,6 +30,17 @@
                         "img": "img/sensu.png",
                         "description": "Monitoring",
                         "link": "/sensu/"
+                    },
+                    {
+                        "id": "portainer",
+                        "title": "portainer",
+                        "img": "img/portainer.png",
+                        "description": "Container visualization and Management",
+                        "link": "",
+                        "linkCreate": {
+                            "host": "portainer",
+                            "endPath": ":3000/"
+                        }
                     }
                 ]
             }
