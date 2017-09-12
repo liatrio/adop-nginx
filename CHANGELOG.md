@@ -31,10 +31,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Added
 - fixed scroll issue on ldop dashboard
 
-## 0.6.0 - 2018-09-12
+## 0.6.0 - 2017-09-12
 ## Added
 - Portainer container and integration
 
-## 0.7.0 - 2018-09-12
+## 1.0.0 - 2017-09-12
 ##Removed
 - Pruned out unused dashboard icons
